@@ -1,0 +1,17 @@
+@font-face
+{
+	font-family: space-Xrebron;
+	src: url(../font/space-Xrebron.ttf);
+}
+body
+{
+	font-family: space-Xrebron;
+	color: #fff;
+	margin: 0px;
+	overflow: hidden;
+}
+canvas
+{
+	background-image: url(../asset/img/background.jpg);
+	position: absolute;
+}

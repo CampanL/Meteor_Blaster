@@ -1,0 +1,124 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 31.01.2017 11:15:04
+
+newmtl texture_coque
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.458824 0.458824 0.458824
+	Kd 0.458824 0.458824 0.458824
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-coque.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-coque.png
+
+newmtl bas_de_caisse
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.388235 0.388235 0.388235
+	Kd 0.388235 0.388235 0.388235
+	Ks 0.135000 0.135000 0.135000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-bas-de-caisse.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-bas-de-caisse.png
+
+newmtl chassi_coquepite
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.458824 0.458824 0.458824
+	Kd 0.458824 0.458824 0.458824
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-coquepite.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-coquepite.png
+
+newmtl jointure2
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.388235 0.388235 0.388235
+	Kd 0.388235 0.388235 0.388235
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+
+newmtl gris1
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.070588 0.070588 0.070588
+	Kd 0.207843 0.207843 0.207843
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+
+newmtl aileron
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.388235 0.388235 0.388235
+	Kd 0.388235 0.388235 0.388235
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-aileron.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-aileron.png
+
+newmtl gris_basique
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.388235 0.388235 0.388235
+	Kd 0.388235 0.388235 0.388235
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-volet.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-volet.png
+
+newmtl canon
+	Ns 29.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.458824 0.458824 0.458824
+	Kd 0.458824 0.458824 0.458824
+	Ks 0.090000 0.090000 0.090000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-canon.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-canon.png
+
+newmtl reacteur
+	Ns 19.999998
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.388235 0.388235 0.388235
+	Kd 0.388235 0.388235 0.388235
+	Ks 0.180000 0.180000 0.180000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Asus\Pictures\wipeout-map-reacteur.png
+	map_Kd C:\Users\Asus\Pictures\wipeout-map-reacteur.png
