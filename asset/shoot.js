@@ -1,4 +1,4 @@
-
+var	nb_click=0
 $("canvas").mousedown(function()
 	{
 		if (shoot_tab.length<3) 

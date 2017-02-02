@@ -1,14 +1,19 @@
 @font-face
 {
-	font-family: space-Xrebron;
-	src: url(../font/space-Xrebron.ttf);
+	font-family: SPACEMAN;
+	src: url(../font/SPACEMAN.TTF);
 }
 body
 {
-	font-family: space-Xrebron;
+	font-family: SPACEMAN;
 	color: #fff;
 	margin: 0px;
 	overflow: hidden;
+}
+div
+{
+	position: absolute;
+	font-size: 35px;
 }
 canvas
 {

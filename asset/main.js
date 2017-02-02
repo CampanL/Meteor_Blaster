@@ -1,5 +1,8 @@
+var timer = 0;
+var minute = 0;
 var container;
 var shoot_tab =[];
+var meteor_tab = [];
 var camera, scene, renderer;
 var mouseY = 0;
 var windowHalfX = window.innerWidth / 2;
@@ -113,5 +116,9 @@ function render()
 			shoot_tab.shift()
 		}
 	}
+	timer++
+	if (Math.floor(timer/60)==60) {minute++; timer=0}
+	document.getElementById("score").innerHTML = "temps: "+minute+" : "+Math.floor(timer/60);
+
 	renderer.render( scene, camera );
 }
