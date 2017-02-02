@@ -1,6 +1,5 @@
-var interShoot=0;
 var container;
-var shoot =[];
+var shoot_tab =[];
 var camera, scene, renderer;
 var mouseY = 0;
 var windowHalfX = window.innerWidth / 2;
@@ -16,7 +15,7 @@ function init()
 	camera.position.y = 100;
 	// scene
 	scene = new THREE.Scene();
-	var ambient = new THREE.AmbientLight( 0x101030 );
+	var ambient = new THREE.AmbientLight( 0xffffff, .5 );
 	scene.add( ambient );
 	var directionalLight = new THREE.DirectionalLight( 0xffffff,0.3 );
 	directionalLight.position.set( 0, 50, 0 );
@@ -57,9 +56,9 @@ function init()
 			}
 		} );
 		object.position.x = window.innerWidth/20*-1;
-		spaceship = object;
 		scene.add( object );
 		object.rotation.y = Math.PI/2*3;
+		spaceship = object;
 	}, onProgress, onError );
 	//
 	renderer = new THREE.WebGLRenderer();
@@ -97,11 +96,22 @@ function onDocumentMouseMove( event ) {
 function animate() 
 {
 	requestAnimationFrame( animate );
+
 	spaceship.position.z = (mouseY/window.innerHeight)*200;
+
 	render();
 }
 function render() 
 {
 	camera.lookAt( scene.position );
+	for(var i=0;i<shoot_tab.length;i++)
+	{
+		shoot_tab[i].position.x +=3
+		if (shoot_tab[i].position.x >150) 
+		{
+			scene.remove(shoot_tab[i]);
+			shoot_tab.shift()
+		}
+	}
 	renderer.render( scene, camera );
 }
