@@ -1,6 +1,6 @@
 @font-face {
-	font-family: "space";
-	src: url(../font/space_Xrebron.ttf);
+	font-family: SPACEMAN;
+	src: url(../font/SPACEMAN.TTF);
 }
 
 html {
@@ -8,19 +8,54 @@ html {
   width: 100%;
   overflow: hidden;
 }
+/* pour credit */
+html.credit {
+	height: auto;
+  	width: auto;
+  	overflow: auto;
+}
 
 body {
   background: linear-gradient(#B41901, #850154);
   position: relative;
 }
 
+body.credit {
+  background: linear-gradient(#DE3400, #5E1600);
+  position: relative;
+}
+
+p{
+	font-family: SPACEMAN;
+	text-align: center;
+	color: #1689DE;
+	padding-button: 15px;
+	font-size: 70px;
+}
+
 h1{
-	font-family: 'VT323', monospace;
+	font-family: SPACEMAN;
 	text-align: center;
 	color: #FFECDE;
-	padding-top: 150px;
-	font-size: 50px;
+	padding-top: 120px;
+	font-size: 47px;
 
+}
+
+h1.credit{
+	font-family: SPACEMAN;
+	text-align: center;
+	color: #FFECDE;
+	padding-top: 10px;
+	font-size: 50px;
+}
+
+h2{
+	font-family: SPACEMAN;
+	text-align: center;
+	color: #2AFAF0;
+	padding-top: 30px;
+	font-size: 30px;
 }
 
 button{
@@ -67,7 +102,7 @@ button:hover{
 }
 
 .i-small{
-	background: url(image/particule-small.png) repeat 0px 0px;
+	background: url("image/particule-small.png") repeat 0px 0px;
 	-webkit-animation: dropFlowParticles 5s linear infinite;
 		 -o-animation: dropFlowParticles 5s linear infinite;
 			animation: dropFlowParticles 5s linear infinite;
