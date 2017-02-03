@@ -1,6 +1,6 @@
 @font-face {
-	font-family: "space";
-	src: url(../font/space_Xrebron.ttf);
+	font-family: space_Xrebron;
+	src: url(../font/space-Xrebron.ttf);
 }
 
 html {
@@ -10,12 +10,12 @@ html {
 }
 
 body {
+  font-family: space_Xrebron;
   background: linear-gradient(#B41901, #850154);
   position: relative;
 }
 
 h1{
-	font-family: 'VT323', monospace;
 	text-align: center;
 	color: #FFECDE;
 	padding-top: 150px;
