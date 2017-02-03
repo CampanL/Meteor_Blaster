@@ -1,3 +1,6 @@
+var MyMusic = new Audio('asset/sound/soundtrack.ogg');
+MyMusic.loop = true;
+MyMusic.play();
 var secondes=0;
 var death_sound= new Audio('asset/sound/dead.ogg');
 var dead=false;
@@ -171,9 +174,14 @@ function render()
 		document.getElementById("score").innerHTML = "temps: "+minute+" : "+Math.floor(timer/60);
 	}
 	else{
-		document.getElementById("text-death").innerHTML = "Vous avez perdu."
-		document.getElementById('restart').innerHTML = "restart"
-		document.getElementById('menu').innerHTML = "menu"
+		document.getElementById('dead').style.width="100%";
+		document.getElementById('dead').style.height="100%";
+		document.getElementById('dead').style.fontSize="50px";
+		document.getElementById('dead').style.paddingTop="30vh";
+		document.getElementById('dead').style.textAlign="center";
+		document.getElementById("text-death").innerHTML = "Vous avez perdu.";
+		document.getElementById('restart').innerHTML = "restart";
+		document.getElementById('menu').innerHTML = "menu";
 	}
 	
 	renderer.render( scene, camera );

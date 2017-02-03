@@ -31,8 +31,7 @@ canvas
 }
 .dead
 {
-	width: 100%;
-	margin-top: 30vh;
+	padding-top: 30vh;
 	text-align: center;
 	font-size: 50px;
 }
