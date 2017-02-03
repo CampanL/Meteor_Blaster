@@ -1,8 +1,17 @@
+var MyMusic = new Audio('asset/sound/soundtrack.ogg');
+MyMusic.loop = true;
+MyMusic.play();
+var secondes=0;
+var death_sound= new Audio('asset/sound/dead.ogg');
+var dead=false;
 var timer = 0;
 var minute = 0;
+var limite = 0;
 var container;
 var shoot_tab =[];
 var meteor_tab = [];
+var raduis_tab = [];
+var speed_tab = [];
 var camera, scene, renderer;
 var mouseY = 0;
 var windowHalfX = window.innerWidth / 2;
@@ -62,6 +71,7 @@ function init()
 		scene.add( object );
 		object.rotation.y = Math.PI/2*3;
 		spaceship = object;
+		return spaceship;
 	}, onProgress, onError );
 	//
 	renderer = new THREE.WebGLRenderer();
@@ -99,26 +109,86 @@ function onDocumentMouseMove( event ) {
 function animate() 
 {
 	requestAnimationFrame( animate );
-
-	spaceship.position.z = (mouseY/window.innerHeight)*200;
-
 	render();
 }
 function render() 
 {
 	camera.lookAt( scene.position );
-	for(var i=0;i<shoot_tab.length;i++)
+	if (!dead) 
 	{
-		shoot_tab[i].position.x +=3
-		if (shoot_tab[i].position.x >150) 
+		if (timer%600==0 && timer>0) 
 		{
-			scene.remove(shoot_tab[i]);
-			shoot_tab.shift()
+			meteor_tab.length=0;
+			speed_tab.length=0;
+			for(k=0;k<10*(minute+1);k++)
+				{
+					meteor_tab.push(meteor());
+					speed_tab.push(random(1,3));
+				};
 		}
-	}
-	timer++
-	if (Math.floor(timer/60)==60) {minute++; timer=0}
-	document.getElementById("score").innerHTML = "temps: "+minute+" : "+Math.floor(timer/60);
 
+
+		spaceship.position.z = (mouseY/window.innerHeight)*200;
+
+		for(var i=0;i<shoot_tab.length;i++)
+		{
+			shoot_tab[i].position.x +=3
+
+			if (shoot_tab[i].position.x >150) 
+			{
+				scene.remove(shoot_tab[i]);
+				shoot_tab.shift()
+			}
+		}
+
+		for(j=0; j<meteor_tab.length;j++)
+		{
+			if(!meteor_tab[j].isDestroy)
+			{
+				meteor_tab[j].position.x-=speed_tab[j];
+
+				if (meteor_tab[j].position.x<-160) 
+				{
+					scene.remove(meteor_tab[j]);
+				}
+				if (vecteur(meteor_tab[j], spaceship)<meteor_tab[j].geometry.boundingSphere.radius+4) 
+				{
+					dead=true;
+					death_sound.play();
+				}
+				for(k=0;k<shoot_tab.length;k++)
+				{
+					if (vecteur(meteor_tab[j], shoot_tab[k])<meteor_tab[j].geometry.boundingSphere.radius) 
+					{
+						scene.remove(meteor_tab[j]);
+						meteor_tab[j].isDestroy=true;
+						scene.remove(shoot_tab[k]);
+						shoot_tab.shift();
+					}
+				}
+			}
+		}
+
+		timer++
+		if (Math.floor(timer/60)==60) {minute++; timer=0}
+		document.getElementById("score").innerHTML = "temps: "+minute+" : "+Math.floor(timer/60);
+	}
+	else{
+		document.getElementById('dead').style.width="100%";
+		document.getElementById('dead').style.height="100%";
+		document.getElementById('dead').style.fontSize="50px";
+		document.getElementById('dead').style.paddingTop="30vh";
+		document.getElementById('dead').style.textAlign="center";
+		document.getElementById("text-death").innerHTML = "Vous avez perdu.";
+		document.getElementById('restart').innerHTML = "restart";
+		document.getElementById('menu').innerHTML = "menu";
+	}
+	
 	renderer.render( scene, camera );
+}
+
+function vecteur(a, b)
+{
+	var vecteur = Math.sqrt(Math.pow(a.position.x-b.position.x, 2)+Math.pow(a.position.z-b.position.z, 2));
+	return vecteur;
 }

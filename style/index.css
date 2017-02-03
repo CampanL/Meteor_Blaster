@@ -19,3 +19,23 @@ canvas
 {
 	position: absolute;
 }
+.time
+{
+	width: 30%;
+	padding-left: 3vw;
+	pointer-events: none;
+}
+.time:hover
+{
+	cursor: default;
+}
+.dead
+{
+	padding-top: 30vh;
+	text-align: center;
+	font-size: 50px;
+}
+a
+{
+	color: #fff;
+}

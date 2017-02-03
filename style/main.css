@@ -16,6 +16,7 @@ html.credit {
 }
 
 body {
+  font-family: SPACEMAN;
   background: linear-gradient(#B41901, #850154);
   position: relative;
 }
@@ -34,7 +35,6 @@ p{
 }
 
 h1{
-	font-family: SPACEMAN;
 	text-align: center;
 	color: #FFECDE;
 	padding-top: 120px;
